@@ -41,8 +41,8 @@ function findLongestWord(arr) {
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-// const sumNumbers = (numbers)=> numbers.length === 0 ? 0 : 
-// numbers.reduce((a,b)=>a+b)
+const sumNumbers = (numbers)=> numbers.length === 0 ? 0 : 
+numbers.reduce((a,b)=>a+b)
 
 function sum(nums) {
   let sum = 0
@@ -116,14 +116,15 @@ const wordsUnique = [
 // wordsUnique.length === 0
 // ? null
 // : [...new Set(wordsUnique)];
-function uniquiryArray(arr){
-  let newArray = []
-  for (let i=0; i<arr.length; i++){
-    if(newArray.indexOf(arr[i])===-1){
-      newArray.push(arr[i])
-    }
-  }
-  return newArray
+function uniquifyArray(arr){
+  // let newArray = []
+  // for (let i=0; i<arr.length; i++){
+  //   if(newArray.indexOf(arr[i])===-1){
+  //     newArray.push(arr[i])
+  //   }
+  // }
+  // return newArray
+  return (arr.length>0)? arr.filter((item,index)=>arr.indexOf(item)===index) : null
 }
 
 // Iteration #6: Find elements
@@ -137,6 +138,10 @@ const wordsFind = [
   "truth",
   "disobedience",
 ];
+
+const doesWordExist =(arr,word)=>{
+  return (arr.length>0)? arr.includes(word): null
+}
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -152,5 +157,14 @@ const wordsCount = [
   "disobedience",
   "matter",
 ];
+
+const howManyTimes=(arr,word)=>{
+  if(arr.length == 0) return 0
+
+  
+  let filteredWords= arr.filter((element)=>element==word)
+  console.log(filteredWords)
+  return filteredWords.length
+}
 
 // Iteration #8: Bonus
