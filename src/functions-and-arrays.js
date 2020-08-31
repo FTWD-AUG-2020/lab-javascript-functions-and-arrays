@@ -112,6 +112,20 @@ const wordsUnique = [
   "bring",
 ];
 
+// const uniquifyArray = (wordsUnique) => 
+// wordsUnique.length === 0
+// ? null
+// : [...new Set(wordsUnique)];
+function uniquiryArray(arr){
+  let newArray = []
+  for (let i=0; i<arr.length; i++){
+    if(newArray.indexOf(arr[i])===-1){
+      newArray.push(arr[i])
+    }
+  }
+  return newArray
+}
+
 // Iteration #6: Find elements
 const wordsFind = [
   "machine",
