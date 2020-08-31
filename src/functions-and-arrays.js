@@ -63,8 +63,11 @@ function sum(nums) {
         throw new Error("Unsupported data type sir or ma'am")
     }
   })
-  return sum
+  return sum 
 }
+
+
+
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
@@ -95,6 +98,15 @@ const averageWordLength = (wordsAvg) => {
     return word.length + acc 
   }, 0) /wordsAvg.length;
 
+}
+
+// Get AVG
+const avg = (arr) => {
+  if(arr.length === 0) {
+    return null
+  }
+  console.log(sum(arr))
+  return Number((sum(arr)/ arr.length).toFixed(2))
 }
 
 // Iteration #5: Unique arrays
@@ -157,6 +169,7 @@ const wordsCount = [
   "disobedience",
   "matter",
 ];
+
 
 const howManyTimes=(arr,word)=>{
   if(arr.length == 0) return 0
