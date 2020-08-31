@@ -30,8 +30,41 @@ function findLongestWord(arr) {
   return longest
 }
 // Iteration #3: Calculate the sum
+// function sumNumbers(arr){
+//   let sum = 0
+//   for(let i =0;i<arr.length;i++){
+//       sum+=arr[i]
+//   }
+//     return sum
+// }
+
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+
+// const sumNumbers = (numbers)=> numbers.length === 0 ? 0 : 
+// numbers.reduce((a,b)=>a+b)
+
+function sum(nums){
+  let sum = 0
+  nums.forEach(num=>{
+    switch (typeof num){
+          case 'string':
+          sum+=num.length
+          break
+          case 'number':
+          sum+=num
+          break
+          case 'boolean':
+          if(num){
+            sum+=1
+          }
+          break
+          default:
+            throw new Error("Unsupported data type sir or ma'am")
+    }
+  })
+  return sum
+  }
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
