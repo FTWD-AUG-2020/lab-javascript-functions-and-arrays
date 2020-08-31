@@ -85,6 +85,18 @@ const wordsArr = [
   "palace",
 ];
 
+const averageWordLength = (wordsAvg) => {
+  if(wordsAvg.length === 0) {
+    return null
+  }
+  return wordsAvg.reduce(function(acc, word) {
+    // return Math.max(x, y.length)
+    console.log(acc, word)
+    return word.length + acc 
+  }, 0) /wordsAvg.length;
+
+}
+
 // Iteration #5: Unique arrays
 const wordsUnique = [
   "crab",
